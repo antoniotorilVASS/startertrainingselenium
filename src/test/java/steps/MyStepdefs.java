@@ -6,6 +6,10 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.SignUpPage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.concurrent.TimeUnit;
 
 public class MyStepdefs {
     @Given("^user wants to have account$")
@@ -30,18 +34,17 @@ public class MyStepdefs {
         signUpPage.userInsert(getUserName());
         signUpPage.passInsert(getPassName());
         signUpPage.clickButton();
-        driver.close(); //closes the browser
     }
 
 
     //Introducir usuario
     private String getUserName() {
-        return "";
+        return "30094971";
     }
 
     //Introducir contraseña
     private String getPassName() {
-        return "";
+        return "P3F3.hp6*L8\"X%/";
     }
 
     @Then("^he should be told$")
