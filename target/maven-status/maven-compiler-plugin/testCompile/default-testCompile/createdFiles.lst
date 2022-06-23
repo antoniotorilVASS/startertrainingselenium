@@ -1,3 +1,5 @@
+pageobject\MainPageObject.class
 steps\MyStepdefs.class
-cucumberClass.class
-pageobject\SignUpPage.class
+pageobject\MainPageServices.class
+cucumberTest.class
+util\HookDriver.class

@@ -1,6 +1,6 @@
-Feature: Client sign up
+Feature: Test Selenium Java
 
-  Scenario: client sign up
-    Given user wants to have account
-    When requiered information
-    Then he should be told
+  Scenario: test selenium java
+    Given link to test page
+    When connect to page advanced options
+    Then introduced user-pass in SD
