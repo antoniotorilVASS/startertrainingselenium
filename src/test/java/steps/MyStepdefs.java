@@ -17,6 +17,12 @@ public class MyStepdefs {
         mainPage.userInsert(getUserName());
         mainPage.passInsert(getPassName());
         mainPage.clickButton();
+
+        try {
+            Thread.sleep(8000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @When("connect to page advanced options")

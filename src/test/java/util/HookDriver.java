@@ -24,6 +24,7 @@ public class HookDriver {
     public static void quitDriver() {
         if (driver != null) {
             driver.quit();
+            driver.close();
         }
     }
 }

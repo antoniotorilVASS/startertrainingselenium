@@ -1,5 +1,5 @@
 #surefire
-#Thu Jun 23 16:38:57 CEST 2022
+#Thu Jun 23 16:45:51 CEST 2022
 classPathUrl.61=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\asynchttpclient\\async-http-client-netty-utils\\2.12.3\\async-http-client-netty-utils-2.12.3.jar
 classPathUrl.60=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\asynchttpclient\\async-http-client\\2.12.3\\async-http-client-2.12.3.jar
 excludes0=**/*$*
@@ -75,9 +75,12 @@ classPathUrl.16=C\:\\Users\\antonio.toril\\.m2\\repository\\junit\\junit\\4.13.2
 classPathUrl.15=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\apiguardian\\apiguardian-api\\1.1.2\\apiguardian-api-1.1.2.jar
 classPathUrl.14=C\:\\Users\\antonio.toril\\.m2\\repository\\io\\cucumber\\ci-environment\\9.0.4\\ci-environment-9.0.4.jar
 classPathUrl.13=C\:\\Users\\antonio.toril\\.m2\\repository\\io\\cucumber\\html-formatter\\19.1.0\\html-formatter-19.1.0.jar
+classPathUrl.77=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\springframework\\spring-test\\5.3.21\\spring-test-5.3.21.jar
 classPathUrl.12=C\:\\Users\\antonio.toril\\.m2\\repository\\io\\cucumber\\docstring\\7.3.4\\docstring-7.3.4.jar
 useManifestOnlyJar=true
+classPathUrl.76=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\springframework\\spring-jcl\\5.3.21\\spring-jcl-5.3.21.jar
 classPathUrl.11=C\:\\Users\\antonio.toril\\.m2\\repository\\io\\cucumber\\cucumber-plugin\\7.3.4\\cucumber-plugin-7.3.4.jar
+classPathUrl.75=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\springframework\\spring-core\\5.3.21\\spring-core-5.3.21.jar
 classPathUrl.10=C\:\\Users\\antonio.toril\\.m2\\repository\\io\\cucumber\\datatable\\7.3.4\\datatable-7.3.4.jar
 classPathUrl.74=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\projectlombok\\lombok\\1.18.24\\lombok-1.18.24.jar
 classPathUrl.73=C\:\\Users\\antonio.toril\\.m2\\repository\\net\\bytebuddy\\byte-buddy\\1.12.10\\byte-buddy-1.12.10.jar
