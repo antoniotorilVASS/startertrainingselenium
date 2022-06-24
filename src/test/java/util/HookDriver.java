@@ -1,7 +1,7 @@
 package util;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.MainPageServices;
@@ -18,6 +18,9 @@ public class HookDriver {
         mainPage.clickAvanzaButton();
         mainPage.clickEnlaceAvanzada();
         mainPage.go("https://store-delivery-web-pre.sales-pre-eslm.tech.adeo.cloud/");
+        mainPage.userInsert(getUserName());
+        mainPage.passInsert(getPassName());
+        mainPage.clickButton();
     }
 
     @After
@@ -25,5 +28,13 @@ public class HookDriver {
         if (driver != null) {
             driver.quit();
         }
+    }
+
+    private static String getUserName() {
+        return "30094971";
+    }
+
+    private static String getPassName() {
+        return "P3F3.hp6*L8\"X%/";
     }
 }

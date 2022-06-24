@@ -9,14 +9,7 @@ import util.HookDriver;
 public class MyStepdefs {
     @Given("link to test page")
     public void linkToTestPage() {
-        /*MainPageServices mainPage = new MainPageServices(HookDriver.driver);
-        mainPage.go("http://demo.automationtesting.in/Register.html");
-        mainPage.writeFirstName("Tomaa!!!");*/
-
         MainPageServices mainPage = new MainPageServices(HookDriver.driver);
-        mainPage.userInsert(getUserName());
-        mainPage.passInsert(getPassName());
-        mainPage.clickButton();
     }
 
     @When("connect to page advanced options")
@@ -27,11 +20,4 @@ public class MyStepdefs {
     public void introducedUserPassInSD() {
     }
 
-    private String getUserName() {
-        return "30094971";
-    }
-
-    private String getPassName() {
-        return "P3F3.hp6*L8\"X%/";
-    }
 }
