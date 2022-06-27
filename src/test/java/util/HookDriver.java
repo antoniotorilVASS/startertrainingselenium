@@ -2,9 +2,12 @@ package util;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import lombok.val;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.MainPageServices;
+
+import javax.swing.*;
 
 public class HookDriver {
     public static WebDriver driver;
@@ -18,9 +21,21 @@ public class HookDriver {
         mainPage.clickAvanzaButton();
         mainPage.clickEnlaceAvanzada();
         mainPage.go("https://store-delivery-web-pre.sales-pre-eslm.tech.adeo.cloud/");
-        mainPage.userInsert(getUserName());
-        mainPage.passInsert(getPassName());
+        val user = pedirUser();
+        val pass = pedirPass();
+        mainPage.userInsert(user);
+        mainPage.passInsert(pass);
         mainPage.clickButton();
+    }
+
+    private static String pedirUser() {
+        JFrame jFrame = new JFrame();
+        return JOptionPane.showInputDialog(jFrame, "Enter your user");
+    }
+
+    private static String pedirPass() {
+        JFrame jFrame = new JFrame();
+        return JOptionPane.showInputDialog(jFrame, "Enter your pass");
     }
 
     @After
@@ -28,13 +43,5 @@ public class HookDriver {
         if (driver != null) {
             driver.quit();
         }
-    }
-
-    private static String getUserName() {
-        return "30094971";
-    }
-
-    private static String getPassName() {
-        return "P3F3.hp6*L8\"X%/";
     }
 }
