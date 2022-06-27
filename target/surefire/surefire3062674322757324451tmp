@@ -1,5 +1,5 @@
 #surefire
-#Mon Jun 27 12:55:03 CEST 2022
+#Mon Jun 27 13:05:53 CEST 2022
 classPathUrl.61=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\asynchttpclient\\async-http-client-netty-utils\\2.12.3\\async-http-client-netty-utils-2.12.3.jar
 classPathUrl.60=C\:\\Users\\antonio.toril\\.m2\\repository\\org\\asynchttpclient\\async-http-client\\2.12.3\\async-http-client-2.12.3.jar
 excludes0=**/*$*
