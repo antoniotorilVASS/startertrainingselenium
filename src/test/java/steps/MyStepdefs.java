@@ -30,18 +30,18 @@ public class MyStepdefs {
         signUpPage.userInsert(getUserName());
         signUpPage.passInsert(getPassName());
         signUpPage.clickButton();
-        driver.close(); //closes the browser
+
     }
 
 
     //Introducir usuario
     private String getUserName() {
-        return "";
+        return "30095945";
     }
 
     //Introducir contraseña
     private String getPassName() {
-        return "";
+        return "Fix2022!";
     }
 
     @Then("^he should be told$")
