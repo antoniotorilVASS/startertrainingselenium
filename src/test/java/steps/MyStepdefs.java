@@ -12,7 +12,7 @@ public class MyStepdefs {
         MainPageServices mainPage = new MainPageServices(HookDriver.driver);
     }
 
-<<<<<<< HEAD
+
     @When("^requiered information$")
     public void requieredInformation() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
@@ -42,7 +42,7 @@ public class MyStepdefs {
     @Then("^he should be told$")
     public void heShouldBeTold() {
     }
-=======
+
     @When("connect to page advanced options")
     public void connectToPageAdvancedOptions() {
     }
@@ -51,5 +51,5 @@ public class MyStepdefs {
     public void introducedUserPassInSD() {
     }
 
->>>>>>> main
+
 }
