@@ -1,6 +1,5 @@
 package util;
 
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import lombok.val;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.MainPageServices;
 
 import javax.swing.*;
+import java.time.Duration;
 
 public class HookDriver {
     public static WebDriver driver;
@@ -17,15 +17,18 @@ public class HookDriver {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         driver = new ChromeDriver();
         MainPageServices mainPage = new MainPageServices(HookDriver.driver);
-        mainPage.go("https://vpeslmwsesb.es.corp.leroymerlin.com:6555/ws/authServiceREST/");
-        mainPage.clickAvanzaButton();
-        mainPage.clickEnlaceAvanzada();
-        mainPage.go("https://store-delivery-web-pre.sales-pre-eslm.tech.adeo.cloud/");
+        mainPage.go("http://localhost:8080/login");
         val user = pedirUser();
         val pass = pedirPass();
         mainPage.userInsert(user);
         mainPage.passInsert(pass);
-        mainPage.clickButton();
+        mainPage.clickButtonPingIdLogin();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        mainPage.campoFecha();
+        mainPage.clickBotonSelecionarFechas();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        mainPage.clickBotonDescargar();
+
     }
 
     private static String pedirUser() {
@@ -36,12 +39,5 @@ public class HookDriver {
     private static String pedirPass() {
         JFrame jFrame = new JFrame();
         return JOptionPane.showInputDialog(jFrame, "Enter your pass");
-    }
-
-    @After
-    public static void quitDriver() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
 }

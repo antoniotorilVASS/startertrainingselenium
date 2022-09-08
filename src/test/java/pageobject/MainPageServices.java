@@ -1,12 +1,15 @@
 package pageobject;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class MainPageServices {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
-    private MainPageObject mainPageObject;
+    private final MainPageObject mainPageObject;
 
     public MainPageServices(WebDriver driver) {
         this.driver = driver;
@@ -17,10 +20,6 @@ public class MainPageServices {
         this.driver.get(url);
     }
 
-    public void writeFirstName(String firstname) {
-        this.mainPageObject.getFirsTbox().sendKeys(firstname);
-    }
-
     public void userInsert(String userName) {
         this.mainPageObject.getUserInsert().sendKeys(userName);
     }
@@ -29,17 +28,29 @@ public class MainPageServices {
         this.mainPageObject.getPassInsert().sendKeys(passName);
     }
 
-    public void clickButton() {
-        this.mainPageObject.getClickButton().click();
+    public void clickButtonPingIdLogin() {
+        this.mainPageObject.getClickButtonPingIdLogin().click();
     }
 
-    public void clickAvanzaButton() {
-        this.mainPageObject.getClickAvanzaButton().click();
+
+    public void clickBotonSelecionarFechas() {
+        this.mainPageObject.getBotonSelecionarFechas().click();
     }
 
-    public void clickEnlaceAvanzada() {
-        this.mainPageObject.getClickEnlaceAvanzada().click();
+    public void clickBotonDescargar() {
+
+        this.mainPageObject.getBotonDescargarExcel().click();
+
     }
 
+
+    public void campoFecha() {
+
+        WebElement element = this.mainPageObject.getTextoFecha();
+        Actions builder = new Actions(driver);
+        builder.doubleClick(element).perform();
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"), "2022-08-01 ~ 2022-08-31");
+
+    }
 
 }

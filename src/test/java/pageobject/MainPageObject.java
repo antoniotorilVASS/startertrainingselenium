@@ -9,19 +9,18 @@ import org.openqa.selenium.support.PageFactory;
 @Getter
 public class MainPageObject {
 
-    @FindBy(xpath = "//input[@placeholder='First Name']")
-    private WebElement firsTbox;
-    @FindBy(xpath = "//input[@id='userName']")
+    @FindBy(xpath = "//input[@id='username']")
     private WebElement userInsert;
-    @FindBy(xpath = "//input[@id='userPassword']")
+    @FindBy(xpath = "//input[@id='my_password']")
     private WebElement passInsert;
-    @FindBy(xpath = "//button[@class='login-btn']")
-    private WebElement clickButton;
-    @FindBy(xpath = "//*[@id=\"details-button\"]")
-    private WebElement clickAvanzaButton;
-    @FindBy(xpath = "//*[@id=\"proceed-link\"]")
-    private WebElement clickEnlaceAvanzada;
-
+    @FindBy(xpath = "//button[@id='my_sign_on_button']")
+    private WebElement clickButtonPingIdLogin;
+    @FindBy(name = "date")
+    private WebElement textoFecha;
+    @FindBy(css = ".mx-datepicker-btn")
+    private WebElement botonSelecionarFechas;
+    @FindBy(xpath = "//button[@class='button negative xlsx']")
+    private WebElement botonDescargarExcel;
     public MainPageObject(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
