@@ -1,23 +1,54 @@
 package steps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageobject.MainPageServices;
-import util.HookDriver;
+
+import java.time.Duration;
+
+import static util.HookDriver.driver;
 
 public class MyStepdefs {
-    @Given("link to test page")
-    public void linkToTestPage() {
-        MainPageServices mainPage = new MainPageServices(HookDriver.driver);
+
+    MainPageServices mainPage = new MainPageServices(driver);
+    @Given("login to page")
+    public void loginToPage() {
+        mainPage.go("http://localhost:8080/");
     }
 
-    @When("connect to page advanced options")
-    public void connectToPageAdvancedOptions() {
+    @When("login to page <user> as {string}")
+    public void loginToPageUserAs(String user) {
+        mainPage.userInsert(user);
     }
 
-    @Then("introduced user-pass in SD")
-    public void introducedUserPassInSD() {
+    @Then("login to page <pass> as {string}")
+    public void loginToPagePassAs(String pass) {
+        mainPage.passInsert(pass);
     }
 
+    @And("click to login button")
+    public void clickToLoginButton() {
+        mainPage.clickButtonPingIdLogin();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+    }
+
+    @And("introduce <date> as {string}")
+    public void intrucedDateAs(String textoFecha) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        mainPage.campoFecha(textoFecha);
+    }
+
+    @And("select date")
+    public void selectDate() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        mainPage.clickBotonSelecionarFechas();
+    }
+
+    @And("click button DownloadExcel")
+    public void clickButtonDownloadExcel() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
+        mainPage.clickBotonDescargar();
+    }
 }
