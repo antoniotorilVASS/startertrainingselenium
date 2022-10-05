@@ -1,14 +1,13 @@
 package util;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HookDriver {
     public static WebDriver driver;
 
-    @Before
+    @BeforeAll
     public static void createDriver() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         driver = new ChromeDriver();

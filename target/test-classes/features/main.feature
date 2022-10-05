@@ -2,7 +2,7 @@
 Feature: Complete test in Store Delivery
   Como usuario de la web voy se va a realizar un test completo de la web
 
-  @connect
+  @connect @End2End
   Scenario: datos de acceso
     Given login to page
     When login to page <user> as "30094971"
