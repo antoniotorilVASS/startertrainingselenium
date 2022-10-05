@@ -11,3 +11,15 @@ Feature: Complete test in Store Delivery
     And introduce <date> as "2022-08-01 ~ 2022-08-31"
     And select date
     And click button DownloadExcel
+
+
+  @billing @SmokeTest
+  Scenario: Verify billing
+
+  @important @SmokeTest
+  Scenario: Missing product description
+    Given hello
+
+  @importantagain @End2End
+  Scenario: Several products
+    Given hello again

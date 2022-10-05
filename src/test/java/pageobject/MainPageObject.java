@@ -22,10 +22,7 @@ public class MainPageObject {
     @FindBy(xpath = "//button[@class='button negative xlsx']")
     private WebElement botonDescargarExcel;
 
-
     public MainPageObject(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-
-
 }
