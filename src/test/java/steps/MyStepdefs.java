@@ -34,13 +34,13 @@ public class MyStepdefs {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
     }
 
-    @And("introduce <date> as {string}")
+    @When("introduce <date> as {string}")
     public void intrucedDateAs(String textoFecha) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
         mainPage.campoFecha(textoFecha);
     }
 
-    @And("select date")
+    @Then("select date")
     public void selectDate() {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
         mainPage.clickBotonSelecionarFechas();

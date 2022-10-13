@@ -21,6 +21,16 @@ public class MainPageObject {
     private WebElement botonSelecionarFechas;
     @FindBy(xpath = "//button[@class='button negative xlsx']")
     private WebElement botonDescargarExcel;
+	@FindBy(xpath="//div[normalize-space()='2']")
+	private WebElement paginationTwo;
+	@FindBy(css=".icon-arrowLeft")
+	private WebElement buttonBackPage;
+	@FindBy(css=".icon-arrowRight")
+	private WebElement buttonNextPage;
+
+
+
+
 
     public MainPageObject(WebDriver driver) {
         PageFactory.initElements(driver, this);

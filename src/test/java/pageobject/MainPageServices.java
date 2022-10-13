@@ -38,6 +38,16 @@ public class MainPageServices {
         this.mainPageObject.getBotonDescargarExcel().click();
     }
 
+    public void clickButtonTwoPagination() {
+        this.mainPageObject.getPaginationTwo().click();
+    }
+    public void clickButtonBackPage() {
+        this.mainPageObject.getButtonBackPage().click();
+    }
+    public void clickButtonNextPage() {
+        this.mainPageObject.getButtonNextPage().click();
+    }
+
     public void campoFecha(String textoFecha) {
         WebElement element = this.mainPageObject.getTextoFecha();
         Actions builder = new Actions(driver);

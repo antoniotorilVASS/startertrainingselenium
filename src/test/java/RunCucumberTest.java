@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         plugin = {"pretty", "html:target/cucumber"},
-        tags = "@End2End"
+        tags = "@main"
 )
 
 public class RunCucumberTest {
