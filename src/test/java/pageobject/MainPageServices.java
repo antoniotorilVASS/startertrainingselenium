@@ -48,6 +48,15 @@ public class MainPageServices {
         this.mainPageObject.getButtonNextPage().click();
     }
 
+    public void clickButtonHamburger(){
+        this.mainPageObject.getHamburguer().click();
+    }
+
+    public void clickButtonAlmacen(){
+        this.mainPageObject.getAlmacen().click();
+    }
+
+
     public void campoFecha(String textoFecha) {
         WebElement element = this.mainPageObject.getTextoFecha();
         Actions builder = new Actions(driver);

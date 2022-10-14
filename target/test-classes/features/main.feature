@@ -6,7 +6,7 @@ Feature: Complete test in Store Delivery
   Scenario: access data
     Given login to page
     When login to page <user> as "30094971"
-    Then login to page <pass> as "ler123"
+    Then login to page <pass> as "EyJ2024.."
     And click to login button
 
   @sd @download
@@ -15,9 +15,17 @@ Feature: Complete test in Store Delivery
     Then select date
     And click button DownloadExcel
 
-  @sd @main
+  @sd
   Scenario: check pagination
     When visit almacen <page> as "http://localhost:8080/home/warehouse-op"
+    Then pulse number pagination
+    And check button back pagination
+    And check button next pagination
+
+
+  @sd @main
+  Scenario: check pagination
+    When visit almacen
     Then pulse number pagination
     And check button back pagination
     And check button next pagination

@@ -9,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 @Getter
 public class MainPageObject {
 
-    @FindBy(xpath = "//input[@id='username']")
+    @FindBy(xpath = "//input[@id='userName']")
     private WebElement userInsert;
-    @FindBy(xpath = "//input[@id='my_password']")
+    @FindBy(xpath = "//input[@id='userPassword']")
     private WebElement passInsert;
-    @FindBy(xpath = "//button[@id='my_sign_on_button']")
+    @FindBy(xpath = "//button[@class='login-btn']")
     private WebElement clickButtonPingIdLogin;
     @FindBy(name = "date")
     private WebElement textoFecha;
@@ -27,6 +27,14 @@ public class MainPageObject {
 	private WebElement buttonBackPage;
 	@FindBy(css=".icon-arrowRight")
 	private WebElement buttonNextPage;
+
+	@FindBy(xpath="//span[@class='icon-menu-hamburger']")
+	private WebElement hamburguer;
+
+	@FindBy(xpath="//label[normalize-space()='Almacén']")
+	private WebElement almacen;
+
+
 
 
 

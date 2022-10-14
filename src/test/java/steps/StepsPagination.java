@@ -40,4 +40,10 @@ public class StepsPagination {
             System.out.println("No more pages exist");
         }
     }
+
+    @When("visit almacen")
+    public void visitAlmacen() {
+        mainPage.clickButtonHamburger();
+        mainPage.clickButtonAlmacen();
+    }
 }
