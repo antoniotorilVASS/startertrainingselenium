@@ -13,6 +13,7 @@ import static util.HookDriver.driver;
 public class MyStepdefs {
 
     MainPageServices mainPage = new MainPageServices(driver);
+
     @Given("login to page")
     public void loginToPage() {
         mainPage.go("http://localhost:8080/");
