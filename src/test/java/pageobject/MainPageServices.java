@@ -41,9 +41,11 @@ public class MainPageServices {
     public void clickButtonTwoPagination() {
         this.mainPageObject.getPaginationTwo().click();
     }
+
     public void clickButtonBackPage() {
         this.mainPageObject.getButtonBackPage().click();
     }
+
     public void clickButtonNextPage() {
         this.mainPageObject.getButtonNextPage().click();
     }

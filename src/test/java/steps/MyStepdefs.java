@@ -14,9 +14,9 @@ public class MyStepdefs {
 
     MainPageServices mainPage = new MainPageServices(driver);
 
-    @Given("login to page")
-    public void loginToPage() {
-        mainPage.go("http://localhost:8080/");
+    @Given("login to <page> as {string}")
+    public void loginToPageAs(String url) {
+        mainPage.go("url");
     }
 
     @When("login to page <user> as {string}")
@@ -52,4 +52,6 @@ public class MyStepdefs {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10000));
         mainPage.clickBotonDescargar();
     }
+
+
 }

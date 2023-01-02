@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         glue= {"steps"},
         plugin = { "pretty", "junit:target/cucumber-reports/Cucumber.xml" },
         monochrome = true,
-        tags = "@main"
+        tags = "@main and @download"
 )
 
 public class RunCucumberTest {

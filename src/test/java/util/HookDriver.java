@@ -11,5 +11,6 @@ public class HookDriver {
     public static void createDriver() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 }
