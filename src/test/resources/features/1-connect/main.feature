@@ -4,7 +4,7 @@ Feature: Complete test in Store Delivery
 
   @sd @main
   Scenario: access data
-    Given login to page
+    Given login to <page> as "https://www.google.es"
     When login to page <user> as "30094971"
     Then login to page <pass> as "ler123"
     And click to login button
