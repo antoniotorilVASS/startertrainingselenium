@@ -28,10 +28,6 @@ public class MainPageObject {
 	@FindBy(css=".icon-arrowRight")
 	private WebElement buttonNextPage;
 
-
-
-
-
     public MainPageObject(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
